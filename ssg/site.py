@@ -1,22 +1,13 @@
-from os import replace
 from pathlib import Path
 
 
 class Site:
 
     def __init__(self, source, dest):
-        source = Path()
-        dest = Path()
+        source = Path(self)
+        dest = Path(self)
 
     def create_dir(self, path):
-        directory = Path('C:\\pythoncode\\Pro-StaticSite\\python-static-site-generator\\ssg')
+        directory = Path(self.dest / path.relative_to(self.source))
         path.relative_to(self.source)
-        
-    def mkdir(directory, *args):
-        parents = True
-        exist_ok = True
-
-    def build()
-
-
-
+        mkdir = (parents=True, exists_okay=True)
